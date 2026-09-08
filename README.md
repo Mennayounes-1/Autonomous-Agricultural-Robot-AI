@@ -39,6 +39,23 @@ The model achieved:
 - mAP@50-95: **92.1%**
 
 ##  Stage 2 – Disease Classification
+##  Results
+
+### Training History
+### Custom CNN Performance
+
+- **Validation Accuracy:** 99.08%
+- **Number of Classes:** 38
+- **Input Image Size:** 224 × 224
+- **Model:** Custom Convolutional Neural Network (CNN)
+- **Framework:** TensorFlow / Keras
+![Custom CNN Training History](CustomCNN_history.png)
+
+### Validation Confusion Matrix
+![Validation Confusion Matrix](CustomCNN_validation_confusion_matrix.png)
+
+### Test Confusion Matrix
+![Test Confusion Matrix](CustomCNN_test_confusion_matrix.png)
 
 After detecting the plant leaf, the detected region is passed to a Custom Convolutional Neural Network (CNN).
 
