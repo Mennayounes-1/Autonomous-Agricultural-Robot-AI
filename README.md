@@ -1,4 +1,4 @@
-#  Autonomous Agricultural Robot – AI & Computer Vision
+# Autonomous Agricultural Robot – AI & Computer Vision
 
 An AI-powered autonomous agricultural robot designed to detect plant leaves and identify plant diseases using Computer Vision and Deep Learning.
 
@@ -6,7 +6,7 @@ An AI-powered autonomous agricultural robot designed to detect plant leaves and 
 
 This project was developed as a Graduation Project.
 
-The main goal is to build an intelligent agricultural robot capable of analyzing plants in real-world environments and detecting plant diseases automatically.
+The main goal is to build an intelligent agricultural robot capable of analyzing plants in real-world environments and automatically detecting plant diseases.
 
 The AI system uses a two-stage computer vision pipeline:
 
@@ -24,29 +24,40 @@ Detected Leaf
 Custom CNN – Disease Classification  
 ↓  
 Disease Prediction
-### Two-Stage AI Prediction Result
 
-The following example shows the complete AI pipeline, where YOLOv8-OBB detects plant leaves and the Custom CNN predicts the corresponding plant disease.
+## Two-Stage AI Prediction Result
+
+The following example demonstrates the complete AI pipeline, where YOLOv8-OBB detects plant leaves and the Custom CNN predicts the corresponding plant disease.
 
 ![Two-Stage AI Prediction](Two_Stage_AI_Prediction.jpg)
 
-##  Stage 1 – Leaf Detection
+## Stage 1 – Leaf Detection
 
-YOLOv8-OBB is used to detect and localize plant leaves.
+YOLOv8-OBB is used to detect and localize plant leaves in plant images.
 
 The detection model was trained to recognize 7 classes representing different plant health and disease severity categories.
 
-The model achieved:
+### YOLOv8-OBB Performance
 
-- Precision: **93.6%**
-- Recall: **84.4%**
-- mAP@50: **99.0%**
-- mAP@50-95: **92.1%**
+- **Precision:** 93.6%
+- **Recall:** 84.4%
+- **mAP@50:** 99.0%
+- **mAP@50-95:** 92.1%
 
-##  Stage 2 – Disease Classification
-##  Results
+### YOLOv8-OBB Confusion Matrix
 
-### Training History
+![YOLOv8 OBB Confusion Matrix](YOLOv8_OBB_Confusion_Matrix.png)
+
+### Dataset Analysis
+
+![YOLOv8 OBB Dataset Analysis](YOLOv8_OBB_Dataset_Analysis.png)
+
+## Stage 2 – Disease Classification
+
+After detecting a plant leaf, the detected region is passed to a Custom Convolutional Neural Network (CNN) for disease classification.
+
+The classifier was trained on **38 plant disease and healthy classes** using images resized to **224 × 224 pixels**.
+
 ### Custom CNN Performance
 
 - **Validation Accuracy:** 99.08%
@@ -54,25 +65,20 @@ The model achieved:
 - **Input Image Size:** 224 × 224
 - **Model:** Custom Convolutional Neural Network (CNN)
 - **Framework:** TensorFlow / Keras
+
+### Training History
+
 ![Custom CNN Training History](CustomCNN_history.png)
 
 ### Validation Confusion Matrix
+
 ![Validation Confusion Matrix](CustomCNN_validation_confusion_matrix.png)
 
 ### Test Confusion Matrix
+
 ![Test Confusion Matrix](CustomCNN_test_confusion_matrix.png)
 
-After detecting the plant leaf, the detected region is passed to a Custom Convolutional Neural Network (CNN).
-
-The classifier was trained on **38 plant disease and healthy classes**.
-
-Performance:
-
-- Validation Accuracy: **99.08%**
-- Input Image Size: **224 × 224**
-- Framework: **TensorFlow / Keras**
-
-Several deep learning architectures were also explored and compared, including:
+Several deep learning architectures were explored and compared during model development, including:
 
 - Custom CNN
 - MobileNetV2
@@ -80,7 +86,7 @@ Several deep learning architectures were also explored and compared, including:
 - ResNet50
 - VGG16
 
-## 🛠️ Technologies Used
+## Technologies Used
 
 - Python
 - TensorFlow
@@ -104,11 +110,34 @@ Several deep learning architectures were also explored and compared, including:
 - `CustomCNN_test_confusion_matrix.png` – Test confusion matrix for the Custom CNN.
 - `YOLOv8_OBB_Confusion_Matrix.png` – YOLOv8-OBB confusion matrix.
 - `YOLOv8_OBB_Dataset_Analysis.png` – YOLOv8-OBB dataset analysis and class distribution.
-##  Project Goal
+- `Two_Stage_AI_Prediction.jpg` – Example output of the complete two-stage AI pipeline.
+- `requirements.txt` – Python dependencies required for the project.
 
-The goal of this project is to combine Artificial Intelligence, Computer Vision and Robotics to support precision agriculture by automatically detecting unhealthy plants and identifying plant diseases.
+## How to Run
 
-##  My Contribution
+1. Clone the repository.
+
+2. Install the required Python packages:
+
+```bash
+pip install -r requirements.txt
+```
+
+3. Open the Jupyter notebooks:
+
+- `CustomCNN_Training.ipynb`
+- `CustomCNN_Testing.ipynb`
+- `YOLOv8_OBB_Training_and_Inference.ipynb`
+
+4. Update the dataset and model paths according to your local environment.
+
+5. Run the notebook cells in order.
+
+## Project Goal
+
+The goal of this project is to combine Artificial Intelligence, Computer Vision, and Robotics to support precision agriculture by automatically detecting unhealthy plants and identifying plant diseases.
+
+## My Contribution
 
 My main contribution to the graduation project focused on the Artificial Intelligence and Computer Vision system, including:
 
@@ -119,7 +148,7 @@ My main contribution to the graduation project focused on the Artificial Intelli
 - Integrating detection and classification into a two-stage AI pipeline.
 - Testing the system on plant images and analyzing model performance.
 
-##  Future Improvements
+## Future Improvements
 
 Future improvements may include:
 
