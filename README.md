@@ -24,6 +24,11 @@ Detected Leaf
 Custom CNN – Disease Classification  
 ↓  
 Disease Prediction
+### Two-Stage AI Prediction Result
+
+The following example shows the complete AI pipeline, where YOLOv8-OBB detects plant leaves and the Custom CNN predicts the corresponding plant disease.
+
+![Two-Stage AI Prediction](Two_Stage_AI_Prediction.jpg)
 
 ##  Stage 1 – Leaf Detection
 
