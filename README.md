@@ -89,16 +89,16 @@ Several deep learning architectures were also explored and compared, including:
 - Computer Vision
 - Deep Learning
 
-##  Repository Contents
+## Repository Contents
 
-- `YOLOv8_OBB_Plant_Disease_Final (1).ipynb` – YOLOv8-OBB training, evaluation and two-stage inference pipeline.
-- `Model Structure.ipynb` – Plant disease classification model development and comparison.
-- `Imgae_Test.ipynb` – Image testing and prediction.
+- `CustomCNN_Training.ipynb` – Custom CNN training and evaluation for plant disease classification.
+- `CustomCNN_Testing.ipynb` – Testing the trained Custom CNN on plant images.
+- `YOLOv8_OBB_Training_and_Inference.ipynb` – YOLOv8-OBB training, evaluation, and two-stage inference pipeline.
 - `CustomCNN_history.png` – Custom CNN training history.
-- `CustomCNN_validation_confusion_matrix.png` – Validation confusion matrix.
-- `CustomCNN_test_confusion_matrix.png` – Test confusion matrix.
-- Classification reports – Detailed evaluation results.
-
+- `CustomCNN_validation_confusion_matrix.png` – Validation confusion matrix for the Custom CNN.
+- `CustomCNN_test_confusion_matrix.png` – Test confusion matrix for the Custom CNN.
+- `YOLOv8_OBB_Confusion_Matrix.png` – YOLOv8-OBB confusion matrix.
+- `YOLOv8_OBB_Dataset_Analysis.png` – YOLOv8-OBB dataset analysis and class distribution.
 ##  Project Goal
 
 The goal of this project is to combine Artificial Intelligence, Computer Vision and Robotics to support precision agriculture by automatically detecting unhealthy plants and identifying plant diseases.
